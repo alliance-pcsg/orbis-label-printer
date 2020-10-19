@@ -1,0 +1,21 @@
+<div class="loading-shade" *ngIf="saving">
+  <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+</div>
+
+<div class="help"><a [routerLink]="['help']" title="Help"><mat-icon>help</mat-icon></a></div>
+
+<div class="back">
+  <button mat-raised-button color="secondary" [routerLink]="['']"><mat-icon>arrow_back</mat-icon>Back</button>
+</div>
+
+<h1>Configuration</h1>
+
+<div *ngIf="configForm">
+  <form [formGroup]="configForm">
+    <mat-form-field appearance="standard">
+      <mat-label>Prefixes</mat-label>
+      <textarea matInput formControlName="prefixes"></textarea>
+    </mat-form-field>
+    <div><button mat-flat-button type="button" color="primary" (click)="saveConfig()"  [disabled]="!(configForm?.dirty)">Save</button></div>
+  </form>
+</div>

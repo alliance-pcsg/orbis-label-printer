@@ -1,0 +1,36 @@
+<h1>
+  Spine Label
+</h1>
+
+<div class="loading" *ngIf="loading">
+  <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+</div>
+  
+<div [hidden]="loading">
+  <mat-card class="spine-label-card">
+    <mat-card-content>
+      <div class="help"><a [routerLink]="['help']" title="Help"><mat-icon>help</mat-icon></a></div>
+      <div [hidden]="isItemRecord">
+        <p>Navigate to an item record to print a spine label.</p>
+      </div>
+      <div [hidden]="!isItemRecord">
+        <h2>{{itemTitle}}</h2>
+        <p>Barcode: {{itemBarcode}}</p>
+        <div class="location-toggle" [hidden]="!isInTemp">
+          Location: 
+          <mat-radio-group [formControl]="locationToggle" (change)="toggleLocation()">
+            <mat-radio-button value="temporary">Temporary</mat-radio-button>
+            <mat-radio-button value="permanent">Permanent</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <textarea #spineLabelArea [value]="spineLabel"></textarea>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div [hidden]="!isItemRecord">
+        <button mat-raised-button color="primary" (click)="printSpineLabel(spineLabelArea.value)"
+         [disabled]="!settings">Print</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

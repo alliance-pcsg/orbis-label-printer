@@ -1,0 +1,35 @@
+.help {
+  float: right;
+}
+
+.loading {
+  width: 50px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.spine-label-card h2 {
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.spine-label-card textarea {
+  padding: 2px;
+  border-width: 1px;
+  $width: calc(100% - 6px);
+  width: $width;
+  max-width: $width;
+  height: 120px;
+  font-family: monospace;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.location-toggle {
+  margin-bottom: 1rem;
+}
+
+.location-toggle mat-radio-button {
+  margin-right: .5rem;
+}
+

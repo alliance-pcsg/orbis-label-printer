@@ -1,0 +1,69 @@
+<div class="loading-shade" *ngIf="saving">
+  <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+</div>
+
+<div class="help"><a [routerLink]="['help']" title="Help"><mat-icon>help</mat-icon></a></div>
+
+<div class="back">
+  <button mat-raised-button color="secondary" [routerLink]="['']"><mat-icon>arrow_back</mat-icon>Back</button>
+</div>
+
+<h1>Settings</h1>
+
+<div *ngIf="settingsForm">
+  <form [formGroup]="settingsForm">
+    <section class="settings-section">
+      <h2>Font</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Family</mat-label>
+        <input matInput formControlName="fontFamily" />
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>Size</mat-label>
+        <input matInput formControlName="fontSize" />
+      </mat-form-field>
+      <label>Weight</label>
+      <mat-radio-group formControlName="fontWeight">
+        <mat-radio-button value="normal">Normal</mat-radio-button>
+        <mat-radio-button value="bold">Bold</mat-radio-button>
+      </mat-radio-group>
+    </section>
+    <section class="settings-section">
+      <h2>Label</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Width</mat-label>
+        <input matInput formControlName="labelWidth" />
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>Height</mat-label>
+        <input matInput formControlName="labelHeight" />
+      </mat-form-field>
+      <mat-form-field appearance="standard">
+        <mat-label>Line Height</mat-label>
+        <input matInput formControlName="lineHeight" />
+      </mat-form-field>
+    </section>
+    <section class="settings-section">
+      <h2>Margins</h2>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Left</mat-label>
+          <input type="text" matInput formControlName="marginLeft" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Right</mat-label>
+          <input matInput formControlName="marginRight" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Top</mat-label>
+          <input matInput formControlName="marginTop" />
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Bottom</mat-label>
+          <input matInput formControlName="marginBottom" />
+        </mat-form-field>
+      </div>
+    </section>
+    <button mat-flat-button type="button" color="primary" (click)="saveSettings()"  [disabled]="!(settingsForm?.dirty)">Save</button>
+  </form>
+</div>

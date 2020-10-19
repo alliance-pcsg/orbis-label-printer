@@ -1,0 +1,9 @@
+@mixin main-component-theme($theme, $typgraphy) {
+  h1 {
+    background-color: mat-color(map-get($theme, primary)) !important;
+    color: mat-color(map-get($theme, primary), default-contrast) !important;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+}

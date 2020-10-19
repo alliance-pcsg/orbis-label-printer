@@ -1,0 +1,58 @@
+<div class="back">
+  <button mat-raised-button color="secondary" [routerLink]="['']"><mat-icon>arrow_back</mat-icon>Back</button>
+</div>
+
+<h1>Help</h1>
+
+<h2>Generate Labels</h2>
+
+<p>To generate a spine label, navigate to a screen with a single item. Possible paths include...</p>
+<ul>
+<li>Scanning a barcode into a Physical Items repository search.</li>
+<li>Performing a repository search by keyword, and then viewing the item list for a bibliographic record or holding. For lists with multiple items, view one item to generate the label.</li>
+</ul>
+
+<p>Click "Print" to open the printer dialog window. Select your label printer and submit the job. Printer settings may require adjustment to format the labels as expected.</p>
+
+<h2>Adjust Label Size and Appearance</h2>
+
+<p>In the three-dot app menu in the upper right, click the gear icon to access the Settings. Saved settings affect only the current user. Edit the fields on this page to adjust the appearance and size of the printed label, and click "Save" at the bottom to apply your changes.</p>
+
+<h3>Font</h3>
+<ul>
+  <li>Family: Enter the name of the font on your computer, e.g., "Times New Roman" (Default: Arial)</li>
+  <li>Size: Enter the size of the font including units, e.g., "11pt" (Default: 10pt)</li>
+  <li>Weight: Select from the options "normal" and "bold." (Default: normal)</li>
+</ul>
+
+<h3>Label</h3>
+<ul>
+  <li>Width: Enter the width of the label using decimals, including units, e.g., "3.5in" (Default: .75in)</li>
+  <li>Height: Enter the height of the label using decimals, including units, e.g., "1.9375in" (Default: 1in)</li>
+  <li>Line Height: Enter the multiplier for line spacing, e.g., "1.5" (Default: 1)</li>
+</ul>
+
+<h3>Margins</h3>
+<p>Enter the left, right, top, and bottom margin spacing including units, e.g., "0in" (Default: 0.1in)</p>
+
+<h2>Configure Prefixes</h2>
+
+<p>In the app menu, click the wrench icon to access the configuration menu. Because configurations affect everyone in an institution, users must have at least one of the following roles to edit them:</p>
+
+<ul>
+  <li>General System Administrator</li>
+  <li>Acquisitions Administrator</li>
+  <li>Catalog Administrator</li>
+  <li>Repository Administrator</li>
+</ul>
+
+<p>Set label prefixes for libraries and locations in the textarea, following the format "[library name]+[location code]=[label text]". Add one entry per line. For example...</p>
+
+<pre>
+My Library+gen=Stacks
+My Library+rdrm=Reading Room
+My Library+res=Reserves
+Branch Campus+res=Branch Reserves
+</pre>
+
+<p>Click "Save" to apply your changes to all app users in your institution.</p>
