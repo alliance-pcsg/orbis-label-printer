@@ -23,7 +23,7 @@ const configAdminRoles = [
 })
 export class ConfigurationComponent implements OnInit {
   configForm: FormGroup;
-  saving = false;
+  saving: boolean = false;
   
   constructor(
     private appService: AppService,

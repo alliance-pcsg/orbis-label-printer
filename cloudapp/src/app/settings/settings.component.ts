@@ -12,7 +12,7 @@ import { Settings } from '../models/settings';
 })
 export class SettingsComponent implements OnInit {
   settingsForm: FormGroup;
-  saving = false;
+  saving: boolean = false;
 
   constructor(
     private appService: AppService,
@@ -25,7 +25,6 @@ export class SettingsComponent implements OnInit {
       this.settingsForm = Object.keys(settings.value).length==0 ?
         FormGroupUtil.toFormGroup(new Settings()) :
         settings;
-      //this.settingsForm = FormGroupUtil.toFormGroup(new Settings());
     });
   }
 
