@@ -7,5 +7,12 @@
 }
 
 @mixin global-styles {
-    /* Add global styles here */
+  .help {
+    float: right;
+  }
+
+  .back {
+    padding-bottom: 10px;
+  }
+
 }
