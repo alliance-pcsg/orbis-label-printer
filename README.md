@@ -2,10 +2,6 @@
  
 This Cloud App developed by the Orbis Cascade Alliance generates individual spine labels to send to a label printer. A Settings page allows users to adjust fonts, margins, and label sizes, and a Configuration page allows administrators to set label prefixes by library and location.
 
-## Install the app
-
-This app is not yet available in the offical Ex Libris App Center. To test it, [install the Command Line Interface (CLI)](https://developers.exlibrisgroup.com/cloudapps/docs/cli/), clone this repository, and initialize it for your Alma environment.
-
 ## Generate Labels
 
 To generate a spine label, navigate to a screen with a single item. Possible paths include...
