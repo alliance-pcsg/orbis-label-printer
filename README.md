@@ -1,4 +1,4 @@
-# oca-label-printer
+# orbis-label-printer
  
 This Cloud App developed by the Orbis Cascade Alliance generates individual spine labels to send to a label printer. A Settings page allows users to adjust fonts, margins, and label sizes, and a Configuration page allows administrators to set label prefixes by library and location.
 
