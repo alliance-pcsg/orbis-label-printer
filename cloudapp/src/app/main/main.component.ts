@@ -123,8 +123,8 @@ export class MainComponent implements OnInit, OnDestroy {
         }
       }
       
-      // Get call number
-      var callNumber = holding_data.call_number;
+      // Get permanent call number
+      var callNumber = holding_data.permanent_call_number;
       // Alternative item call number overwrites holding call number
       if (item_data.alternative_call_number != '') {
         callNumber = item_data.alternative_call_number;
