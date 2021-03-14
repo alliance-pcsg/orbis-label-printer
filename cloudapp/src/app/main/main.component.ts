@@ -114,7 +114,8 @@ export class MainComponent implements OnInit, OnDestroy {
       // Get prefix
       var library_location = itemLibrary + '+' + itemLocationCode;
       var prefix = '';
-      var split_prefixes = this.configuration.prefixes.split(/\r?\n/g);
+      var split_prefixes = this.configuration && this.configuration.prefixes && 
+        this.configuration.prefixes.split(/\r?\n/g) || [];
       var prefix_line;
       for (var p = 0; p < split_prefixes.length; p++) {
         prefix_line = split_prefixes[p];
