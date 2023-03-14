@@ -12,5 +12,10 @@
       "config": "/#/config",
       "settings": "/#/settings",
       "help": "/#/help"
+   },
+   "contentSecurity": {
+      "sandbox": {
+         "popups": true
+      }
    }
 }
